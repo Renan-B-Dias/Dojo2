@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0C171550B8169807C45E92 /* Pods_Dojo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97963C2CAE980CDBB7BE4A3 /* Pods_Dojo2.framework */; };
 		841D8454201440BD000F7A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8453201440BD000F7A04 /* AppDelegate.swift */; };
 		841D845B201440BD000F7A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841D845A201440BD000F7A04 /* Assets.xcassets */; };
 		841D845E201440BD000F7A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841D845C201440BD000F7A04 /* LaunchScreen.storyboard */; };
@@ -17,9 +18,11 @@
 		843AE9EB20144D7F00D0CD28 /* StarshipEnclosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AE9EA20144D7F00D0CD28 /* StarshipEnclosure.swift */; };
 		84D3927B201559A0003C83CA /* StarshipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D39279201559A0003C83CA /* StarshipCell.swift */; };
 		84D3927C201559A0003C83CA /* StarshipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D3927A201559A0003C83CA /* StarshipCell.xib */; };
+		84FACC8820B3ADE9001CCC7B /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FACC8720B3ADE9001CCC7B /* Provider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0249172DCA4EDAD9D2CCB515 /* Pods-Dojo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dojo2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dojo2/Pods-Dojo2.debug.xcconfig"; sourceTree = "<group>"; };
 		841D8450201440BD000F7A04 /* Dojo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dojo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841D8453201440BD000F7A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		841D845A201440BD000F7A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +35,9 @@
 		843AE9EA20144D7F00D0CD28 /* StarshipEnclosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipEnclosure.swift; sourceTree = "<group>"; };
 		84D39279201559A0003C83CA /* StarshipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipCell.swift; sourceTree = "<group>"; };
 		84D3927A201559A0003C83CA /* StarshipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarshipCell.xib; sourceTree = "<group>"; };
+		84FACC8720B3ADE9001CCC7B /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		AAF5F31F2BF9FC7E2FB3B4E0 /* Pods-Dojo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dojo2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dojo2/Pods-Dojo2.release.xcconfig"; sourceTree = "<group>"; };
+		C97963C2CAE980CDBB7BE4A3 /* Pods_Dojo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dojo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0C171550B8169807C45E92 /* Pods_Dojo2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CDF4FEA9E7508C4E0CBB64E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C97963C2CAE980CDBB7BE4A3 /* Pods_Dojo2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F4DFDC56A3B1BC48B84BDCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0249172DCA4EDAD9D2CCB515 /* Pods-Dojo2.debug.xcconfig */,
+				AAF5F31F2BF9FC7E2FB3B4E0 /* Pods-Dojo2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		841D8447201440BD000F7A04 = {
 			isa = PBXGroup;
 			children = (
 				841D8452201440BD000F7A04 /* Dojo2 */,
 				841D8451201440BD000F7A04 /* Products */,
+				7F4DFDC56A3B1BC48B84BDCD /* Pods */,
+				5CDF4FEA9E7508C4E0CBB64E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,19 +90,28 @@
 		841D8452201440BD000F7A04 /* Dojo2 */ = {
 			isa = PBXGroup;
 			children = (
+				84FACC8620B3ADDA001CCC7B /* Network */,
 				841D8453201440BD000F7A04 /* AppDelegate.swift */,
 				841D845A201440BD000F7A04 /* Assets.xcassets */,
 				841D845C201440BD000F7A04 /* LaunchScreen.storyboard */,
 				841D845F201440BD000F7A04 /* Info.plist */,
 				841D846520144228000F7A04 /* MainViewController.swift */,
 				841D846620144228000F7A04 /* MainViewController.xib */,
-				841D846920144277000F7A04 /* Network.swift */,
 				841D846B201442FC000F7A04 /* Starship.swift */,
 				843AE9EA20144D7F00D0CD28 /* StarshipEnclosure.swift */,
 				84D39279201559A0003C83CA /* StarshipCell.swift */,
 				84D3927A201559A0003C83CA /* StarshipCell.xib */,
 			);
 			path = Dojo2;
+			sourceTree = "<group>";
+		};
+		84FACC8620B3ADDA001CCC7B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				841D846920144277000F7A04 /* Network.swift */,
+				84FACC8720B3ADE9001CCC7B /* Provider.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 841D8462201440BD000F7A04 /* Build configuration list for PBXNativeTarget "Dojo2" */;
 			buildPhases = (
+				D9F750540F2C77DAE1AC105E /* [CP] Check Pods Manifest.lock */,
 				841D844C201440BD000F7A04 /* Sources */,
 				841D844D201440BD000F7A04 /* Frameworks */,
 				841D844E201440BD000F7A04 /* Resources */,
+				6C2BDAAB9499333E8C7BBAFD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +184,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C2BDAAB9499333E8C7BBAFD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Dojo2/Pods-Dojo2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HGPlaceholders/HGPlaceholders.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGPlaceholders.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dojo2/Pods-Dojo2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9F750540F2C77DAE1AC105E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dojo2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		841D844C201440BD000F7A04 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -154,6 +244,7 @@
 			files = (
 				841D8454201440BD000F7A04 /* AppDelegate.swift in Sources */,
 				841D846720144228000F7A04 /* MainViewController.swift in Sources */,
+				84FACC8820B3ADE9001CCC7B /* Provider.swift in Sources */,
 				843AE9EB20144D7F00D0CD28 /* StarshipEnclosure.swift in Sources */,
 				841D846A20144277000F7A04 /* Network.swift in Sources */,
 				841D846C201442FC000F7A04 /* Starship.swift in Sources */,
@@ -284,6 +375,7 @@
 		};
 		841D8463201440BD000F7A04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0249172DCA4EDAD9D2CCB515 /* Pods-Dojo2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +391,7 @@
 		};
 		841D8464201440BD000F7A04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAF5F31F2BF9FC7E2FB3B4E0 /* Pods-Dojo2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

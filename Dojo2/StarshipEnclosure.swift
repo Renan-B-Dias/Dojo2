@@ -7,10 +7,19 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class StarshipEnclosure: Decodable {
-    var count: Int?
-    var next: String?
-    var previous: String?
-    var results: [Starship]?
+class StarshipEnclosure/*: ImmutableMappable*/ {
+    
+//    let count: Int
+//    var next: String?
+//    var previous: String?
+//    var results: [Starship]
+    
+//    required init(map: Map) throws {
+//        count = try map.value("count")
+//        next = try? map.value("next")
+//        previous = try? map.value("previous")
+//    }
+    
 }

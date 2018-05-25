@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HGPlaceholders
 
 class MainViewController: UIViewController {
     
@@ -25,18 +26,28 @@ class MainViewController: UIViewController {
         applyLaouts()
         configureTableView()
         
-        network.getShips(success: { [weak self] (starships) in
-            DispatchQueue.main.async {
-                guard let strongSelf = self else { return }
-                strongSelf.starships = starships
-                strongSelf.tableView.reloadData()
-            }
-        }, failure: { (error) in
-            DispatchQueue.main.async {
-                print("Oh não")
-                print(error.localizedDescription)
-            }
-        })
+//        network.getShips(success: { [weak self] (starships) in
+//            DispatchQueue.main.async {
+//                guard let strongSelf = self else { return }
+//                if starships.isEmpty {
+//                    if let tableView = strongSelf.tableView as? TableView
+//                        let key = PlaceholderKey.custom(key: "starWars")
+//                        tableView.showCustomPlaceholder(with: key)
+//                    }
+//                }
+//                strongSelf.starships = starships
+////                strongSelf.tableView.reloadData()
+//            }
+//        }, failure: { [weak self] (error) in
+//            DispatchQueue.main.async {
+//                guard let strongSelf = self else { return }
+//                print("Oh não")
+//                print(error.localizedDescription)
+//                if let tableView = strongSelf.tableView as? TableView {
+//                    tableView.showErrorPlaceholder()
+//                }
+//            }
+//        })
     }
     
     private func configureTableView() {
