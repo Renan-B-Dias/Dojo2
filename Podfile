@@ -9,6 +9,6 @@ target 'Dojo2' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Moya-ObjectMapper/RxSwift'
-  pod 'HGPlaceholders'
+  pod 'SkeletonView'
 
 end

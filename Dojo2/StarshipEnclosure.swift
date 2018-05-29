@@ -9,17 +9,22 @@
 import Foundation
 import ObjectMapper
 
-class StarshipEnclosure/*: ImmutableMappable*/ {
+class StarshipEnclosure: Mappable {
     
-//    let count: Int
-//    var next: String?
-//    var previous: String?
-//    var results: [Starship]
+    var count: Int?
+    var next: URL?
+    var previous: URL?
+    var results: [Starship]?
     
-//    required init(map: Map) throws {
-//        count = try map.value("count")
-//        next = try? map.value("next")
-//        previous = try? map.value("previous")
-//    }
+    required init?(map: Map) {
+        mapping(map: map)
+    }
+    
+    func mapping(map: Map) {
+        count <- map["count"]
+        next <- ( map["next"], URLTransform())
+        previous <- ( map["previoud"], URLTransform() )
+        results <- map["results"]
+    }
     
 }

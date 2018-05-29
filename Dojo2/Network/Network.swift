@@ -13,7 +13,7 @@ import Moya
 import Moya_ObjectMapper
 
 class APIClientHost {
-    static let baseUrlString = "swapi.co/api"
+    static let baseUrlString = "https://swapi.co/api"
     static var baseUrl = URL(string: baseUrlString)!
 }
 
@@ -69,13 +69,14 @@ extension APITarget: TargetType {
 }
 
 protocol StarshipNetworkProtocol {
-//    func getShips() -> Single<[Starship]>
+    func getShips() -> Single<[Starship]>
 }
 
 class Network: StarshipNetworkProtocol {
-//    func getShips() -> Single<StarshipEnclosure> {
-//        return provider.rx
-//            .request(.starships())
-//            .mapObject(StarshipEnclosure.self)
-//    }
+    func getShips() -> Single<[Starship]> {
+        return provider.rx
+            .request(.starships())
+            .mapObject(StarshipEnclosure.self)
+            .map { $0.results ?? [] }
+    }
 }
