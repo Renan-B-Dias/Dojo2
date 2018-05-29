@@ -29,7 +29,6 @@ class MainViewController: UIViewController {
             DispatchQueue.main.async {
                 guard let strongSelf = self else { return }
                 strongSelf.starships = starships
-                strongSelf.tableView.reloadData()
             }
         }, failure: { (error) in
             DispatchQueue.main.async {

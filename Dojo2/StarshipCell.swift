@@ -18,6 +18,8 @@ class StarshipCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        spaceImage.clipsToBounds = true
+        self.spaceImage.image = #imageLiteral(resourceName: "spaceship")
     }
     
     func populateWith(starship: Starship) {
