@@ -6,6 +6,9 @@ target 'Dojo2' do
   use_frameworks!
 
   # Pods for Dojo2
-  pod "SkeletonView"
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Moya-ObjectMapper/RxSwift'
+  pod 'SkeletonView'
 
 end
